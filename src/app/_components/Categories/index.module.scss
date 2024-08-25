@@ -1,0 +1,54 @@
+@use '../../_css/queries.scss' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 0 20px;
+  margin-top: 50px; // Adds space above the section
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px 30px; // Add padding to create a band effect
+  background-color: var(--color-light-100); // Light background for the band
+  border-radius: 10px; // Rounding the corners of the band
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); // Add a soft shadow for a floating effect
+
+  h3 {
+    font-weight: 600;
+    font-size: 2rem; // Adjusted font size
+    color: var(--color-dark-100);
+    letter-spacing: 0.05em;
+  }
+
+  a {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--color-primary);
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid var(--color-primary);
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background-color: var(--color-primary);
+      color: var(--color-dark-50);
+    }
+  }
+}
+
+.list {
+  display: grid;
+  gap: 30px;
+  padding: 0;
+  grid-template-columns: repeat(3, 1fr);
+
+  @include small-break {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,38 @@
+@use '../../../_css/queries.scss' as *;
+
+.card {
+  position: relative;
+  background-color: var(--color-dark-50);
+  min-height: 360px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 20px;
+  cursor: pointer;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 15px; // Slight rounding of corners
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); // Soft shadow for a floating effect
+  transition: transform 0.3s ease, box-shadow 0.3s ease; // Smooth transition for hover effect
+
+  &:hover {
+    transform: translateY(-5px); // Slight lift on hover
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); // More pronounced shadow on hover
+  }
+}
+
+.title {
+  border-radius: 10px;
+  padding: 16px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.4); // Slightly transparent background for a modern look
+  backdrop-filter: blur(5px); // Apply blur effect behind the text
+  font-weight: 600; // Bolder text for emphasis
+  font-size: 1.2rem; // Slightly larger font size for better readability
+  color: var(--color-dark-100); // Darker text color for better contrast
+}
