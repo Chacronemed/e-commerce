@@ -68,7 +68,7 @@ const navItems = footer?.navItems || [];
                       alt={item.link.label}
                       width={24}
                       height={24}
-                      className={classes.socialIcon}
+                      className={classes.social}
                     />
                   </Button>
                 )
