@@ -3,8 +3,9 @@
 .actions {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: calc(var(--base) / 2);
+  gap: 16px;
 
   @include mid-break {
     flex-direction: column;
@@ -13,17 +14,24 @@
 }
 
 .price {
-  font-weight: 600;
-  line-height: 1;
+  font-weight: 700;
+  color: #333;
+  font-size: 22px;
+  line-height: 1.4;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 16px;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: #007bff;
+  }
 
   > * {
     margin: 0;
   }
-}
 
-.priceBreakdown {
-  color: var(--theme-elevation-500);
+  @include small-break {
+    font-size: 20px;
+  }
 }

@@ -2,15 +2,31 @@
 
 .container {
   width: 100%;
+  padding: 40px 0;
+  background-color: #f7f8fa;
 }
 
 .products {
   display: grid;
-  grid-template-columns: 1fr 75%;
+  grid-template-columns: 1fr 3fr;
   gap: 60px;
+  padding: 40px 20px; // Add padding to both sides to prevent the grid from being too close to the container's edges
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
 
   @include large-break {
-    grid-template-columns: 100%;
-    gap: 48px;
+    grid-template-columns: 1fr 1fr; // Adjust to two equal columns when there is enough space
+    gap: 40px;
+  }
+
+  @include small-break {
+    grid-template-columns: 1fr; // Adjust to a single column for small screens
+    gap: 30px;
   }
 }
